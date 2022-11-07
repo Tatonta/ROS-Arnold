@@ -1,0 +1,33 @@
+controller_frequency: 10.0 # 20.0 funziona
+sim_time: 5.0 # 15.0 10.0 7.0 2.0 funziona 
+sim_granularity: 0.05  #0.05 0.025 funziona 
+vx_samples: 15       #10 15 20 funziona
+vtheta_samples: 35     #30 35 60 funziona
+
+penalize_negative_x: false #con false funziona
+
+#pdist_scale: 2.5
+#gdist_scale: 2.5
+
+
+
+TrajectoryPlannerROS:
+
+  max_vel_x: 0.2 # 0.5, 0.2 0.1  funziona
+  min_vel_x: 0.1 #  -0.5 -0.2  -0.1 funziona
+
+  max_vel_theta: 0.3 #0.3
+  min_vel_theta: -0.3 # -0.3
+  min_in_place_vel_theta: 0.3 #0.3
+
+  acc_lim_theta: 0.35 #0.5 0.35 funziona
+  acc_lim_x: 0.1 #0.2 0.1 funziona
+  acc_lim_y: 0.001 
+
+  holonomic_robot: false
+
+  escape_vel: -0.1 # -0.1 -0.07 0.0 funziona 
+
+  xy_goal_tolerance: 0.70 # su wiki 0.10 0.50 0.70 funziona -- metterli alti per l'esplorazione
+  yaw_goal_tolerance: 6.28 # su wiki 0.05  1.0 1.5 funziona 
+  latch_xy_goal_tolerance: false
