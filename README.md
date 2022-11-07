@@ -61,11 +61,13 @@ During the Initializing state we launch two launch files(“base_node.launch”,
 -	The realsense camera’s drivers
 -	Pointcloud assembler for the environment, UVC and lamp
 -	Exploration
+-	
 In the same Smach state we launch “save_maps.launch”, where is present:
 - Pointcloud saver
 - UVC dosage saver
 - Lamp dosage saver
-Then the FSM passes to the next state “Check”. It is used to check when the “exploration phase” ends. Here we have improved the autonomy of ARNOLD, removing the custom delays used previously. We have exploited the publisher subscriber architecture of ROS: when the first exploration ends (with the initial sanitizing phase), a message is published on a specific topic.
+- 
+Then the FSM passes to the next state “Check”. It is used to check when the “exploration phase” ends. Here we have improved the autonomy of ARNOLD, removing the custom delays used previously.
 
 ## Smach Manipulator
 The smach state machine for the manipulator consists of three states: (this code is present in the Intel NUC of the robot, is not present in this repository)
