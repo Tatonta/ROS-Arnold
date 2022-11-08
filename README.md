@@ -61,12 +61,12 @@ During the Initializing state we launch two launch files(“base_node.launch”,
 -	The realsense camera’s drivers
 -	Pointcloud assembler for the environment, UVC and lamp
 -	Exploration
--	
+
 In the same Smach state we launch “save_maps.launch”, where is present:
 - Pointcloud saver
 - UVC dosage saver
 - Lamp dosage saver
-- 
+
 Then the FSM passes to the next state “Check”. It is used to check when the “exploration phase” ends. Here we have improved the autonomy of ARNOLD, removing the custom delays used previously.
 
 ## Smach Manipulator
